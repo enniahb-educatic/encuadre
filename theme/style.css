@@ -1,0 +1,1146 @@
+/*!
+Tramas · Género 1.1.0 — estilo para eXeLearning 4.0.
+Adaptación del estilo Default, eXeLearning.net / Ignacio Gros.
+Iconos originales de Francisco Javier Pulido Cuadrado.
+CC BY-SA 3.0. https://creativecommons.org/licenses/by-sa/3.0/
+Personalización creada para Ennia con asistencia de ChatGPT.
+*/
+/* Default style (to review) */
+
+body.exe-export {
+    padding: 1em 0;
+}
+
+body.exe-web-site {
+    padding: 0;
+}
+
+.exe-content a {
+    color: #d76b4a;
+}
+
+.exe-content a:hover,
+.exe-content a:focus {
+    color: #993d28;
+}
+
+#node-content-container.exe-content #node-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: block;
+}
+
+.exe-content {
+    color: #333;
+    background-color: #fff;
+}
+
+.js .exe-export .exe-content {
+    min-height: 100vh;
+}
+
+/* iframe */
+.js .in-iframe .exe-content {
+    min-height: 0;
+}
+
+.exe-content .package-title {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: .4em;
+    line-height: 1.2em;
+}
+
+.exe-content .page-title {
+    color: #078e8e;
+    font-size: 1.7rem;
+    text-align: left;
+}
+
+.exe-single-page .package-header .package-title {
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+.exe-single-page .package-node {
+    margin-bottom: 3.5em;
+}
+
+.exe-single-page .package-subtitle {
+    top: -2.1em;
+}
+
+.exe-single-page main.page>section {
+    min-height: 4em;
+}
+
+.exe-content .box {
+    margin: 20px 0;
+    border: none;
+    background-color: #fff;
+}
+
+.exe-web-site .exe-content .box {
+    margin: 40px 0;
+}
+
+.exe-content .box-head {
+    border-bottom: 0;
+}
+
+#node-content-container .box-content {
+    background: #FCFCFC;
+    border: 1px solid #ECECEC;
+    padding: 10px;
+    border-radius: 8px;
+}
+article.box.idevice-element-in-content[mode="export"] .idevice_node {
+    background: none;
+}
+
+#node-content-container.exe-content .box.hidden-idevices {
+    border-style: solid;
+}
+
+.exe-content .box header {
+    min-height: 60px;
+}
+
+.exe-content .box-title {
+    color: #054d4d;
+    font-size: 1.5rem;
+}
+
+.exe-content .box-head .exe-icon {
+    float: left;
+}
+
+.exe-web-site .page-content,
+#exe-client-search,
+.exe-web-site main>header,
+.exe-web-site #siteFooterContent,
+.exe-export .exe-content {
+    max-width: 1280px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.exe-web-site .exe-content {
+    max-width: none;
+    padding: 0;
+}
+
+.exe-export main {
+    padding-top: 1.5em;
+}
+
+.exe-web-site main {
+    padding-top: 4.5em;
+}
+
+/* siteNav */
+#siteNav {
+    float: left;
+    background: #f6f6f6;
+    width: 300px;
+    padding-top: 66px;
+    padding-left: 8px;
+}
+
+.exe-web-site .exe-content {
+    box-shadow:
+        inset 300px 0 0 0 #f6f6f6,
+        inset 301px 0 0 0 #f0f0f0;
+}
+
+/* False left column in iframe */
+html.js .in-iframe.exe-web-site::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 301px; /* fake column width */
+    height: 100%;
+    background:#f6f6f6;
+    /* simulate border-right */
+    box-shadow: inset -1px 0 0 0 #f0f0f0;
+    pointer-events: none;
+    z-index: -1;
+}
+/* No false left column when the menu is hidden */
+body.siteNav-off::after{
+    display: none;
+}
+
+#siteFooter {
+    margin-bottom: 2em;
+    color: #555;
+    font-size: 0.95em;
+}
+
+#siteNav .other-section {
+    display: none;
+}
+
+#sidebar-nav.fixed {
+    position: fixed;
+}
+
+body.siteNav-off #siteNav {
+    display: none;
+}
+
+body.siteNav-off .exe-content {
+    box-shadow: none;
+}
+
+.exe-web-site main.page {
+    padding-top: 4.5em;
+    padding-left: 320px;
+    padding-right: 20px;
+}
+
+.exe-web-site #siteFooter {
+    padding: 20px 20px 20px 320px;
+}
+
+body.siteNav-off main.page,
+body.siteNav-off #siteFooter {
+    padding-left: 20px;
+}
+
+#siteNav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#siteNav ul ul {
+    margin-top: 5px;
+}
+
+#siteNav li {
+    margin: 0 0 5px 0;
+    padding: 0;
+    list-style: none;
+}
+
+#siteNav a {
+    color: #000;
+    display: block;
+    padding: 8px 15px;
+    border-radius: 8px;
+    max-width: 280px;
+    transition: background-color 0.5s ease;
+}
+
+#siteNav a.active {
+    background: #fff;
+    color: #d76b4a;
+}
+
+#siteNav a.highlighted-link {
+    color: #d76b4a;
+    background: #ededed;
+}
+
+#siteNav a.highlighted-link:hover,
+#siteNav a.highlighted-link:focus {
+    background: #fff;
+}
+
+#siteNav a:hover {
+    background: #f2f2f2;
+    text-decoration: none;
+}
+
+#siteNav ul ul a {
+    padding-left: 35px;
+    font-size: 0.95em;
+}
+
+#siteNav ul ul ul a {
+    padding-left: 55px;
+    font-size: 0.9em;
+}
+
+#siteNav ul ul ul ul a {
+    padding-left: 75px;
+}
+
+/* pagination */
+.nav-buttons .nav-button,
+button.toggler {
+    position: fixed;
+    top: 10px;
+    left: 15px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #078e8e url(img/icons.png) no-repeat 0 0;
+    background-size: auto 40px;
+    border-radius: 50%;
+    z-index: 999;
+    border: 0;
+    transition: background-color 0.5s ease;
+}
+
+.nav-buttons span.nav-button {
+    cursor: not-allowed;
+    background-color: #b7b7b7;
+}
+
+.nav-buttons .nav-button-left {
+    background-position: -80px 0;
+}
+
+.nav-buttons .nav-button-right {
+    background-position: -120px 0;
+}
+
+button#searchBarTogger {
+    background-position: -40px 0;
+    display: none;
+}
+
+.exe-search-on #searchBarTogger {
+    display: inline;
+}
+
+button#siteNavToggler {
+    left: 280px;
+}
+
+button#searchBarTogger {
+    left: 330px;
+}
+
+body.siteNav-off button#siteNavToggler {
+    left: 65px;
+}
+
+body.siteNav-off button#searchBarTogger {
+    left: 115px;
+}
+
+.nav-buttons a:hover,
+.nav-buttons a:focus,
+button.toggler:hover,
+button.toggler:focus {
+    background-color: #066d6d;
+    border-color: #066d6d;
+}
+
+.nav-buttons .nav-button span,
+.box-toggle span,
+#exe-client-search-reset span,
+#packageLicense .license-label {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.package-subtitle {
+    font-size: .95em;
+    color: #666;
+    position: relative;
+    top: -.15em;
+}
+
+.nav-buttons .nav-button-right {
+    left: auto;
+    right: 15px;
+}
+
+/* Box toggler */
+.exe-export .box {
+    position: relative;
+}
+
+.exe-export .box-toggle {
+    width: 40px;
+    height: 40px;
+    background: url(img/icons.png) no-repeat -200px 0;
+    background-size: auto 40px;
+    border-radius: 50%;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.6;
+}
+
+.exe-export .box-head:hover .box-toggle,
+.exe-export .box-toggle:focus {
+    opacity: 1;
+}
+
+.exe-export .no-header .box-toggle {
+    top: -10px;
+}
+
+.exe-export .minimized .box-toggle {
+    background-position: -160px 0;
+}
+
+#node-content-container.exe-content .box-head .exe-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+}
+
+#node-content-container.exe-content .box-head .exe-icon img {
+    height: 40px;
+}
+
+.exe-export .box-icon img {
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.exe-export .box-icon img {
+    width: 40px;
+    height: auto;
+}
+
+.exe-export .box-title {
+    padding-top: 5px;
+}
+
+.exe-export .box.minimized .box-head {
+    border-bottom: 1px solid #ddd;
+}
+
+.exe-export .box.no-header.minimized .box-head {
+    border-color: #fff;
+}
+
+.exe-export .box .box-content {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: auto;
+}
+
+.exe-export .box.no-header .box-content {
+    background: none;
+    border: none;
+    padding: 20px 0;
+}
+
+/* Search bar */
+#exe-client-search {
+    display: none;
+    margin-bottom: 30px;
+}
+
+#exe-client-search-text {
+    max-width: 80%;
+    max-width: calc(100% - 90px);
+    display: inline;
+}
+
+#exe-client-search-submit {
+    text-indent: -999em;
+    background: #078e8e url(img/icons.png) no-repeat -41px -1px;
+    background-size: auto 40px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 4px;
+}
+
+#exe-client-search-reset.visible {
+    background: url(img/icons.png) no-repeat -242px -1px;
+    background-size: auto 40px;
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+    left: -5px;
+    opacity: 0.6;
+    border-radius: 4px;
+}
+
+#exe-client-search-reset:hover,
+#exe-client-search-reset:focus {
+    opacity: 1;
+}
+
+#exe-client-search-submit:hover,
+#exe-client-search-submit:focus {
+    background-color: #066d6d;
+}
+
+#exe-client-search-results-list ul,
+#exe-client-search-results-list li {
+    margin: 2em 0;
+    padding: 0;
+    list-style: none;
+}
+
+#exe-client-search-results-list li {
+    margin: 0 0 1em 0;
+}
+
+#exe-client-search-results-list p {
+    margin-top: 2em;
+}
+
+/* Licenses */
+#packageLicense {
+    text-align: left;
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1em;
+    margin: 2.5em 0 2em 0;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+#packageLicense p {
+    margin: 0;
+}
+
+#packageLicense a {
+    color: #666;
+    text-transform: capitalize;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
+    line-height: 15px;
+}
+
+#packageLicense a:hover,
+#packageLicense a:focus {
+    text-decoration: none;
+    color: #d76b4a;
+}
+
+#packageLicense.propietary {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    height: 0;
+}
+
+#packageLicense.cc {
+    padding: 0 20px 0 90px;
+    background: url(img/licenses.gif) no-repeat 0 0;
+}
+
+#packageLicense.cc-by-sa {
+    background-position: 0 -100px;
+}
+
+#packageLicense.cc-by-nd {
+    background-position: 0 -200px;
+}
+
+#packageLicense.cc-by-nc {
+    background-position: 0 -300px;
+}
+
+#packageLicense.cc-by-nc-sa {
+    background-position: 0 -400px;
+}
+
+#packageLicense.cc-by-nc-nd {
+    background-position: 0 -500px;
+}
+
+#packageLicense.cc-0 {
+    background-position: 0 -600px;
+}
+
+/* iDevice buttons */
+.exe-content .iDevice_buttons input,
+.exe-content .iDevice_buttons button {
+    background: #fff;
+    color: #555;
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: 0.5s ease;
+}
+
+.exe-content .iDevice_buttons input:hover,
+.exe-content .iDevice_buttons input:focus,
+.exe-content .iDevice_buttons button:hover,
+.exe-content .iDevice_buttons button:focus {
+    box-shadow: 2px 2px 4px #dbdbdb;
+    color: #000;
+    border-color: #bbb;
+}
+
+/* Page counter */
+.page-counter {
+    display: inline;
+    float: right;
+    margin: 0 0 0.5em 20px;
+    font-size: 0.9em;
+    color: #777;
+    font-weight: 300;
+}
+
+.page-counter .page-counter-sep {
+    margin: 0 0.1em;
+}
+
+.exe-web-site .page-counter {
+    position: fixed;
+    top: 18px;
+    right: 70px;
+    margin: 0;
+    font-size: 0.9em;
+    color: #777;
+    padding: 0 8px;
+    border-radius: 4px;
+    text-align: left;
+}
+
+/* Teacher mode */
+#teacher-mode-toggler-wrapper {
+    float: right;
+    margin: 0 0 0 1em;
+}
+
+#teacher-mode-toggler.form-check-input:checked {
+    background-color: #078e8e;
+    border-color: #078e8e;
+    font-size: 0.9em;
+    margin-right: 0.6em;
+}
+
+label[for="teacher-mode-toggler"] {
+    font-size: 0.9em;
+    color: #777;
+    position: relative;
+    top: -0.2em;
+}
+
+/* Bootstrap buttons */
+.exe-content .btn-primary {
+    background-color: #066d6d;
+    border-color: #066d6d;
+}
+
+.exe-content .btn-primary:hover,
+.exe-content .btn-primary:focus {
+    background-color: #078e8e;
+    border-color: #078e8e;
+}
+
+/* Responsive design */
+@media (max-width: 767.98px) {
+    #siteNav {
+        width: 251px;
+    }
+
+    .exe-web-site .exe-content {
+        box-shadow:
+            inset 251px 0 0 0 #f6f6f6,
+            inset 252px 0 0 0 #f0f0f0;
+    }
+
+    /* False left column in iframe */
+    html.js .in-iframe.exe-web-site::after {
+        width: 252px; /* fake column width */
+    }
+
+    #siteNav a {
+        max-width: 235px;
+    }
+
+    button#siteNavToggler {
+        left: 232px;
+    }
+
+    button#searchBarTogger {
+        left: 282px;
+    }
+
+    .exe-web-site main.page,
+    .exe-web-site #siteFooter {
+        padding-left: 270px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #siteNav {
+        width: 100%;
+        float: none;
+        padding: 68px 10px 20px 10px;
+        min-height: 0 !important;
+        height: auto !important;
+    }
+
+    /* No false left column */
+    .exe-web-site .exe-content {
+        box-shadow: none;
+    }
+    body.exe-web-site::after {
+        display: none;
+    }
+
+    body.exe-web-site main.page {
+        padding-top: 2.5em;
+        padding-left: 0;
+    }
+
+    body.exe-web-site #siteFooter {
+        padding-left: 0;
+    }
+
+    .exe-web-site.siteNav-off main.page {
+        padding-top: 5.5em;
+    }
+
+    .nav-buttons .nav-button,
+    button.toggler {
+        position: absolute;
+    }
+
+    #siteNav a {
+        max-width: 100%;
+    }
+
+    #sidebar-nav.fixed {
+        position: relative;
+    }
+
+    button#siteNavToggler {
+        left: 65px;
+    }
+
+    button#searchBarTogger {
+        left: 115px;
+    }
+
+    .exe-web-site .page-counter {
+        background: none;
+        position: absolute;
+    }
+
+    .exe-web-site .page-counter .page-counter-label {
+        position: absolute;
+        clip: rect(1px 1px 1px 1px);
+        /* IE6, IE7 */
+        clip: rect(1px, 1px, 1px, 1px);
+    }
+}
+
+@media print {
+
+    /* Node in new page: section.package-node{page-break-after:always} */
+    html body.exe-export {
+        background: #fff;
+    }
+
+    .exe-content {
+        color: #000;
+        padding: 0;
+    }
+
+    @page {
+        margin: 1.5cm;
+    }
+
+    /* Uncomment this to print URL after links:
+    a{font-weight:bolder;text-decoration:none!important}
+    a[href^=http]:after{content:" <" attr(href) "> "}
+    */
+    #packageLicense.cc {
+        background: none;
+        padding-left: 0;
+    }
+
+    .exe-export .box-toggle {
+        display: none;
+    }
+
+    /* Website */
+    .exe-web-site #siteNav,
+    .exe-web-site .nav-buttons,
+    .exe-web-site button.toggler {
+        display: none;
+    }
+
+    .exe-web-site #siteFooter,
+    .exe-web-site main.page {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .exe-web-site main.page {
+        padding-top: 1em;
+    }
+}
+
+/* Tramas · Género — personalización sobre el estilo Default de eXeLearning 4.0.0.
+   La paleta se puede editar aquí. No utiliza fuentes ni imágenes remotas. */
+.exe-content {
+  --tr-ink: #302733;
+  --tr-plum: #512f52;
+  --tr-violet: #6d4275;
+  --tr-paper: #fbf8f3;
+  --tr-lilac: #eee6f1;
+  --tr-line: #dfd3e1;
+  --tr-green: #245b52;
+  --exe-icon-color: #6d4275;
+  --exe-icon-picker-color: #6d4275;
+  --exe-fx-focus-color: #245b52;
+  color: var(--tr-ink);
+  background: var(--tr-paper);
+  font: 17px/1.75 "Segoe UI", "Aptos", Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  overflow-wrap: break-word;
+  accent-color: var(--tr-violet);
+}
+.exe-content ::selection { background: #e7d5ec; color: #302733; }
+.exe-content a { color: #6a3470; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.exe-content a:hover, .exe-content a:focus { color: #45204b; }
+.exe-content .box-content p a, .exe-content .box-content li a { text-decoration: underline; }
+.exe-content :is(a,button,input,select,textarea,summary):focus-visible {
+  outline: 3px solid #245b52;
+  outline-offset: 4px;
+}
+.exe-content p { margin-bottom: 1.1em; }
+.exe-content p:last-child { margin-bottom: 0; }
+.exe-content :is(h1,h2,h3,h4,h5,h6) { line-height: 1.3; }
+.exe-content h3 { color: var(--tr-plum); }
+.exe-content li { margin-bottom: .4em; }
+.exe-content strong { font-weight: 650; }
+
+/* Cabecera y espacio de lectura. */
+.exe-web-site .exe-content {
+  box-shadow: inset 260px 0 0 #eee6f1, inset 261px 0 0 #dfd3e1;
+}
+body.exe-web-site { background: #fbf8f3; }
+body.exe-web-site::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: 64px;
+  background: #fbf8f3; border-bottom: 1px solid #dfd3e1; z-index: 100;
+}
+html.js .in-iframe.exe-web-site::after { width: 261px; background: #eee6f1; box-shadow: inset -1px 0 0 #dfd3e1; }
+.exe-web-site main.page { padding: 100px 36px 24px 296px; }
+.exe-web-site .page-content, .exe-web-site main>header, .exe-web-site #siteFooterContent {
+  max-width: 1120px; padding: 0; margin-inline: auto;
+}
+.exe-web-site main>header, .exe-export .main-header {
+  position: relative; border: 1px solid #d8c7df; border-radius: 6px 30px 6px 6px;
+  padding: 38px 40px 32px; background: #eee6f1 url(img/tramas.svg) no-repeat right center;
+  background-size: auto 100%; border-top: 5px solid #512f52; isolation: isolate;
+  --tramas-art-x: 100%;
+}
+.exe-content .package-title,
+.exe-single-page .package-header .package-title {
+  font-family: Georgia, "Times New Roman", serif; color: #512f52;
+  font-size: clamp(2.4rem,4.6vw,4rem); font-weight: 400; line-height: 1.1;
+  letter-spacing: -.045em; margin: 0 0 14px; max-width: 78%;
+}
+.exe-content .package-subtitle, .exe-single-page .package-subtitle {
+  font-size: 1rem; color: #594760; position: static; margin: 0 0 20px; max-width: 70%;
+}
+.exe-content .page-title {
+  color: #512f52; font: 650 1.35rem/1.4 "Segoe UI", Arial, sans-serif;
+  margin: 0; text-align: left; max-width: 80%;
+}
+.exe-web-site .page-counter {
+  top: 19px; right: 80px; color: #594760; font-size: .86rem;
+  z-index: 101; background: #fbf8f3; font-weight: 400;
+}
+
+/* Navegación del sitio; se conserva la navegación que genera eXe. */
+.exe-web-site #siteNav {
+  position: fixed; top: 64px; bottom: 0; left: 0;
+  padding: 27px 16px; width: 260px; float: left;
+  background: #eee6f1; border-right: 1px solid #dfd3e1;
+  overflow-y: auto; overscroll-behavior: contain; z-index: 50;
+}
+.exe-content #siteNav>ul { border-top: 1px solid #cbb7d3; padding-top: 16px; }
+.exe-content #siteNav li { margin-bottom: 6px; }
+.exe-content #siteNav a {
+  max-width: 100%; padding: 12px 14px; color: #513d56;
+  border-radius: 4px 14px 4px 4px; border-left: 3px solid transparent;
+  font-size: .93rem; line-height: 1.5; text-decoration: none;
+  transition: background-color .15s ease;
+}
+.exe-content #siteNav a:hover, .exe-content #siteNav a:focus {
+  background: #e3d7e8; color: #412449;
+}
+.exe-content #siteNav a.active, .exe-content #siteNav a.highlighted-link {
+  color: #fff; background: #512f52; border-left-color: #bea0cc; font-weight: 600;
+}
+.exe-content #siteNav ul ul a { padding-left: 27px; font-size: .88rem; }
+.exe-content #siteNav ul ul ul a { padding-left: 39px; }
+.exe-content #siteNav ul ul ul ul a { padding-left: 51px; }
+.exe-content .nav-buttons .nav-button, .exe-content button.toggler {
+  width: 44px; height: 44px; top: 10px; border-radius: 10px;
+  background-color: #512f52; background-size: auto 44px;
+  box-shadow: none; transition: background-color .15s ease;
+}
+.exe-content .nav-buttons .nav-button-left { background-position: -88px 0; }
+.exe-content .nav-buttons .nav-button-right { background-position: -132px 0; }
+.exe-content .nav-buttons span.nav-button { background-color: #a394a5; }
+.exe-content button#siteNavToggler, body.siteNav-off .exe-content button#siteNavToggler { left: 72px; }
+.exe-content button#searchBarTogger, .exe-content button#searchBarToggler,
+body.siteNav-off .exe-content button#searchBarTogger,
+body.siteNav-off .exe-content button#searchBarToggler { left: 128px; background-position: -44px 0; }
+.exe-content .nav-buttons a:hover, .exe-content .nav-buttons a:focus,
+.exe-content button.toggler:hover, .exe-content button.toggler:focus { background-color: #733d78; }
+body.siteNav-off .exe-content { box-shadow: none; }
+body.siteNav-off main.page, body.siteNav-off #siteFooter { padding-left: 36px; }
+
+/* Bloques de eXe: contenido, iconos y controles. */
+.exe-content .box, .exe-web-site .exe-content .box {
+  margin: 28px 0; border: 1px solid #dfd3e1;
+  border-radius: 5px 20px 5px 5px; background: #fff;
+  box-shadow: 0 3px 0 #eee6f1;
+}
+.exe-content .box .box-head,
+#node-content-container.exe-content .box .box-head {
+  display: flex; align-items: center; gap: 14px;
+  min-height: 72px; padding: 16px 72px 16px 22px;
+  border: 0; border-bottom: 1px solid #e5dce8;
+  border-radius: 5px 20px 0 0; background: #f6f1f8;
+}
+.exe-content .box-head .box-title,
+#node-content-container.exe-content .box-head .box-title {
+  color: #512f52; font: 650 1.2rem/1.4 "Segoe UI", Arial, sans-serif;
+  padding: 0; margin: 0; flex: 1; min-width: 0;
+}
+.exe-content .box-head .box-icon,
+#node-content-container.exe-content .box-head .exe-icon {
+  color: var(--exe-icon-color); flex: 0 0 36px; width: 36px; height: 36px;
+  display: inline-flex; align-items: center; float: none; font-size: 32px;
+}
+.exe-content .box-icon img,
+#node-content-container.exe-content .box-head .exe-icon img {
+  width: 36px; height: auto; max-height: 36px; margin: 0; float: none;
+  filter: grayscale(1) brightness(.57) sepia(.4) hue-rotate(226deg) saturate(2);
+}
+.exe-content .box-icon .exe-material-icon,
+#node-content-container.exe-content .box-head .exe-icon .exe-material-icon {
+  width: 36px; height: 36px; margin: 0; color: #6d4275;
+  background-color: currentColor;
+  -webkit-mask-image: var(--exe-material-icon-url); mask-image: var(--exe-material-icon-url);
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-size: contain; mask-size: contain;
+  -webkit-mask-position: center; mask-position: center; transform: scale(1.2);
+}
+.exe-content .box .box-content,
+#node-content-container.exe-content .box .box-content {
+  background: #fff; border: 0; border-radius: 0 0 5px 5px;
+  padding: 26px 30px; overflow: visible;
+}
+.exe-content .box.no-header .box-content { padding: 28px 30px; background: #fff; }
+.exe-content .box.no-header .box-head { min-height: 0; padding: 0; border: 0; background: transparent; }
+.exe-content .box-toggle {
+  width: 44px; height: 44px; top: 14px; right: 16px;
+  border: 1px solid #cbbbce; border-radius: 50%; background-color: #fff;
+  opacity: .9; background-position: -198px 1px;
+}
+.exe-content .minimized .box-toggle { background-position: -158px 1px; }
+.exe-content .no-header .box-toggle { top: 7px; right: 7px; }
+.exe-content .box.minimized .box-head { border-bottom: 0; }
+.exe-content .nav-buttons .nav-button span,
+.exe-content .box-toggle span,
+.exe-content #exe-client-search-reset span,
+.exe-content #packageLicense .license-label {
+  width: 1px; height: 1px; padding: 0; margin: -1px;
+  border: 0; overflow: hidden; white-space: nowrap; clip-path: inset(50%);
+}
+.exe-content .box-content blockquote {
+  border: 0; border-left: 4px solid #6d4275; background: #f4edf6;
+  color: #512f52; margin: 1.3em 0; padding: 18px 24px;
+  font: 1.2rem/1.65 Georgia, "Times New Roman", serif;
+}
+.exe-content .box-content :is(img,video,iframe) { max-width: 100%; }
+.exe-content .box-content img { height: auto; }
+.exe-content :is(.iDevice_buttons input,.iDevice_buttons button,.btn-primary) {
+  background: #512f52; border: 1px solid #512f52; color: #fff;
+  border-radius: 6px; padding: 9px 17px; min-height: 44px;
+  font: 600 .94rem/1.5 "Segoe UI",Arial,sans-serif;
+}
+.exe-content :is(.iDevice_buttons input,.iDevice_buttons button,.btn-primary):is(:hover,:focus) {
+  background: #733d78; border-color: #733d78; color: #fff; box-shadow: none;
+}
+.exe-content .box-content table:not([role="presentation"]) {
+  width: 100%; margin-block: 1em; border-collapse: collapse;
+}
+.exe-content .box-content :is(th,td) { border: 1px solid #d9ccde; padding: 12px 15px; vertical-align: top; }
+.exe-content .box-content th { background: #eee6f1; color: #512f52; }
+.exe-content .box-content tbody tr:nth-child(even) { background: #fbf8fc; }
+.exe-content .box-content pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.exe-content .fx-tabs a, .exe-content .fx-pagination li:not(.fx-current) a { color: #6a3470; }
+.exe-content .fx-pagination .fx-current a { background: #512f52; color: #fff; }
+
+/* Clases opcionales para futuros contenidos del encuadre. */
+.exe-content .tramas-kicker {
+  font-size: .75rem; line-height: 1.5; font-weight: 700;
+  letter-spacing: .13em; text-transform: uppercase; color: #6d4275;
+}
+.exe-content .tramas-intro { font-size: 1.13rem; line-height: 1.75; }
+.exe-content .tramas-nota {
+  background: #eff5f0; border-left: 4px solid #245b52;
+  padding: 18px 22px; color: #254c45; margin-block: 1.3em;
+}
+.exe-content .tramas-etiquetas { display: flex; flex-wrap: wrap; gap: 9px; margin: 18px 0 0; }
+.exe-content .tramas-etiquetas span {
+  display: inline-block; border: 1px solid #d9c8df; border-radius: 30px;
+  background: #fbf8fc; color: #613868; padding: 5px 14px; font-size: .81rem;
+}
+.exe-content .tramas-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+.exe-content .tramas-tarjeta { padding: 22px; border: 1px solid #ded3e2; background: #fbf8fc; border-radius: 3px 16px 3px 3px; }
+.exe-content .tramas-tarjeta h3 { font: 400 1.4rem/1.3 Georgia,serif; margin: 8px 0 12px; }
+.exe-content .tramas-tarjeta p { font-size: .94rem; }
+
+/* Búsqueda y pie. */
+.exe-content #exe-client-search { padding: 0; margin: 0 auto 24px; max-width: 1120px; }
+.exe-content #exe-client-search-submit { background-color: #512f52; }
+.exe-web-site #siteFooter { padding: 10px 36px 35px 296px; font-size: .84rem; color: #655669; }
+.exe-content #packageLicense { color: #655669; line-height: 1.5; }
+.exe-content #packageLicense a { color: #655669; line-height: 1.6; }
+.exe-content #siteUserFooter { padding-top: 16px; border-top: 1px solid #d9cfde; }
+.exe-content #teacher-mode-toggler.form-check-input:checked { background-color: #512f52; border-color: #512f52; }
+.exe-content label[for="teacher-mode-toggler"] { color: #655669; }
+#node-content-container.exe-content #node-content { max-width: 1120px; padding: 24px; }
+.exe-single-page .package-header, .exe-scorm .package-header, .exe-ims .package-header { padding-bottom: 5px; }
+.exe-single-page .package-node { margin-bottom: 3em; }
+.exe-single-page .page-title { margin: 20px 0; }
+
+@media (max-width: 1000px) and (min-width: 761px) {
+  .exe-web-site #siteNav { width: 224px; padding-inline: 12px; }
+  .exe-web-site .exe-content { box-shadow: inset 224px 0 0 #eee6f1, inset 225px 0 0 #dfd3e1; }
+  html.js .in-iframe.exe-web-site::after { width: 225px; }
+  .exe-web-site main.page { padding-left: 248px; padding-right: 24px; }
+  .exe-web-site #siteFooter { padding-left: 248px; padding-right: 24px; }
+  .exe-web-site main>header { padding: 30px 28px; background-position: 170% center; --tramas-art-x: 170%; }
+}
+@media (max-width: 760px) {
+  .exe-content { font-size: 16px; }
+  .exe-web-site .exe-content, body.siteNav-off .exe-content { box-shadow: none; }
+  html.js .in-iframe.exe-web-site::after { display: none; }
+  .exe-web-site #siteNav {
+    position: relative; top: auto; bottom: auto; width: 100%; float: none;
+    padding: 82px 18px 20px; border-right: 0; border-bottom: 1px solid #dfd3e1;
+  }
+  body.exe-web-site main.page { padding: 28px 18px 12px; }
+  body.exe-web-site.siteNav-off main.page { padding: 88px 18px 12px; }
+  .exe-web-site main>header, .exe-export .main-header {
+    padding: 26px 24px; border-radius: 5px 23px 5px 5px;
+    background-size: auto 100%; background-position: 220px center;
+    --tramas-art-x: 220px;
+  }
+  .exe-content .package-title { font-size: 2.7rem; max-width: 100%; }
+  .exe-content .package-subtitle { max-width: 100%; }
+  .exe-content .page-title { font-size: 1.2rem; max-width: 100%; }
+  .exe-content .box, .exe-web-site .exe-content .box { margin: 22px 0; }
+  .exe-content .box .box-head { padding: 16px 66px 16px 17px; gap: 10px; }
+  .exe-content .box-head .box-title { font-size: 1.1rem; }
+  .exe-content .box .box-content, .exe-content .box.no-header .box-content { padding: 22px; }
+  .exe-content .box-toggle { right: 12px; }
+  .exe-content .tramas-grid { grid-template-columns: 1fr; }
+  body.exe-web-site #siteFooter, body.siteNav-off #siteFooter { padding: 8px 18px 28px; }
+  .exe-content .nav-buttons .nav-button, .exe-content button.toggler { position: fixed; }
+  .exe-web-site .page-counter { position: fixed; background: #fbf8f3; }
+  .exe-web-site .page-counter .page-counter-label { position: static; clip: auto; }
+}
+@media (max-width: 380px) {
+  .exe-web-site .page-counter .page-counter-label { position: absolute; clip: rect(1px,1px,1px,1px); }
+  .exe-content .box .box-content { padding: 18px; }
+  .exe-content .package-title { font-size: 2.4rem; }
+}
+/* Movimiento 1.1.0. Entradas de una sola vez; los contenidos nunca dependen
+   de la animación para ser visibles. Ningún efecto queda en bucle. */
+@keyframes tramas-appear {
+  from { opacity: .18; transform: translateY(22px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes tramas-title {
+  from { opacity: .25; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes tramas-weave {
+  0% { background-position: calc(var(--tramas-art-x, 100%) + 34px) center; }
+  72% { background-position: calc(var(--tramas-art-x, 100%) - 5px) center; }
+  100% { background-position: var(--tramas-art-x, 100%) center; }
+}
+@keyframes tramas-menu {
+  from { opacity: .3; transform: translateX(-12px); }
+  to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tramas-motion .exe-content .main-header {
+    animation: tramas-weave 3400ms ease-out both;
+  }
+  .tramas-motion .exe-content .package-title {
+    animation: tramas-title 750ms cubic-bezier(.2,.7,.3,1) both;
+  }
+  .tramas-motion .exe-content .package-subtitle {
+    animation: tramas-title 750ms cubic-bezier(.2,.7,.3,1) 120ms both;
+  }
+  .tramas-motion .exe-content .page-title {
+    animation: tramas-title 700ms cubic-bezier(.2,.7,.3,1) 200ms both;
+  }
+  .tramas-motion .exe-content .tramas-enter {
+    animation: tramas-appear 720ms cubic-bezier(.2,.7,.3,1) var(--tramas-delay,80ms) both;
+  }
+  .tramas-motion .exe-content .tramas-enter:focus-within { animation: none; }
+  .tramas-motion .exe-content #siteNav.tramas-menu-opening {
+    animation: tramas-menu 300ms ease-out;
+  }
+  .exe-content .tramas-tarjeta {
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  }
+  .exe-content .nav-buttons a, .exe-content button.toggler,
+  .exe-content .box-toggle, .exe-content .iDevice_buttons button,
+  .exe-content .iDevice_buttons input, .exe-content .btn-primary {
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+  }
+  .exe-content .box-icon img { transition: transform 220ms ease; }
+  .exe-content #siteNav a { transition: background-color 180ms ease, padding-left 180ms ease; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .exe-content .tramas-tarjeta:hover {
+    transform: translateY(-5px); box-shadow: 0 9px 22px #512f5217; border-color: #b795c5;
+  }
+  .exe-content .nav-buttons a:hover, .exe-content button.toggler:hover,
+  .exe-content .box-toggle:hover, .exe-content .iDevice_buttons button:hover,
+  .exe-content .iDevice_buttons input:hover, .exe-content .btn-primary:hover {
+    transform: translateY(-2px); box-shadow: 0 4px 10px #512f5226;
+  }
+  .exe-content .box-head:hover .box-icon img { transform: rotate(-7deg) scale(1.06); }
+  .exe-content #siteNav>ul>li>a:hover { padding-left: 19px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .exe-content *, .exe-content *::before, .exe-content *::after {
+    scroll-behavior: auto !important; transition: none !important; animation: none !important;
+  }
+}
+@media print {
+  .exe-content *, .exe-content *::before, .exe-content *::after {
+    animation: none !important; transition: none !important; transform: none !important;
+  }
+  body.exe-web-site::before, html.js .in-iframe.exe-web-site::after { display: none; }
+  .exe-content, .exe-web-site .exe-content { background: #fff; box-shadow: none; color: #000; }
+  .exe-web-site #siteNav, .exe-content .nav-buttons, .exe-content button.toggler, .exe-content .box-toggle, .exe-content .page-counter { display: none; }
+  body.exe-web-site main.page, body.exe-web-site.siteNav-off main.page, body.exe-web-site #siteFooter { padding: 0; }
+  .exe-web-site main>header, .exe-export .main-header { background: #fff; border: 0; border-bottom: 2px solid #512f52; }
+  .exe-content .box { box-shadow: none; break-inside: auto; }
+  .exe-content .box-head { break-after: avoid; }
+  .exe-content .box.minimized .box-content { display: block !important; }
+  .exe-content .tramas-grid { grid-template-columns: 1fr; }
+}
